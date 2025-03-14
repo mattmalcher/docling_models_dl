@@ -2,48 +2,48 @@ docling_models
 └── ds4sd--docling-models
     ├── .cache
     │   └── huggingface
-    │       ├── .gitignore
+    │       ├── .gitignore (684888c0...5f494fc1, 0.0 KB)
     │       └── download
-    │           ├── .gitattributes.lock
-    │           ├── .gitattributes.metadata
-    │           ├── .gitignore.lock
-    │           ├── .gitignore.metadata
-    │           ├── README.md.lock
-    │           ├── README.md.metadata
-    │           ├── config.json.lock
-    │           ├── config.json.metadata
+    │           ├── .gitattributes.lock (e3b0c442...7852b855, 0.0 KB)
+    │           ├── .gitattributes.metadata (8c54ac6a...d89f7be2, 0.1 KB)
+    │           ├── .gitignore.lock (e3b0c442...7852b855, 0.0 KB)
+    │           ├── .gitignore.metadata (4fc3aceb...ed301e58, 0.1 KB)
+    │           ├── README.md.lock (e3b0c442...7852b855, 0.0 KB)
+    │           ├── README.md.metadata (dc659d46...96c69460, 0.1 KB)
+    │           ├── config.json.lock (e3b0c442...7852b855, 0.0 KB)
+    │           ├── config.json.metadata (af9e238c...5a3363d8, 0.1 KB)
     │           └── model_artifacts
     │               ├── layout
-    │               │   ├── config.json.lock
-    │               │   ├── config.json.metadata
-    │               │   ├── model.safetensors.lock
-    │               │   ├── model.safetensors.metadata
-    │               │   ├── preprocessor_config.json.lock
-    │               │   └── preprocessor_config.json.metadata
+    │               │   ├── config.json.lock (e3b0c442...7852b855, 0.0 KB)
+    │               │   ├── config.json.metadata (233debf0...9655e88d, 0.1 KB)
+    │               │   ├── model.safetensors.lock (e3b0c442...7852b855, 0.0 KB)
+    │               │   ├── model.safetensors.metadata (f507bd17...9b10c16c, 0.1 KB)
+    │               │   ├── preprocessor_config.json.lock (e3b0c442...7852b855, 0.0 KB)
+    │               │   └── preprocessor_config.json.metadata (4dd9bf94...b28db8e5, 0.1 KB)
     │               └── tableformer
     │                   ├── accurate
-    │                   │   ├── tableformer_accurate.safetensors.lock
-    │                   │   ├── tableformer_accurate.safetensors.metadata
-    │                   │   ├── tm_config.json.lock
-    │                   │   └── tm_config.json.metadata
+    │                   │   ├── tableformer_accurate.safetensors.lock (e3b0c442...7852b855, 0.0 KB)
+    │                   │   ├── tableformer_accurate.safetensors.metadata (6305440b...199366a3, 0.1 KB)
+    │                   │   ├── tm_config.json.lock (e3b0c442...7852b855, 0.0 KB)
+    │                   │   └── tm_config.json.metadata (8705b66b...3b30192d, 0.1 KB)
     │                   └── fast
-    │                       ├── tableformer_fast.safetensors.lock
-    │                       ├── tableformer_fast.safetensors.metadata
-    │                       ├── tm_config.json.lock
-    │                       └── tm_config.json.metadata
-    ├── .gitattributes
-    ├── .gitignore
-    ├── README.md
-    ├── config.json
+    │                       ├── tableformer_fast.safetensors.lock (e3b0c442...7852b855, 0.0 KB)
+    │                       ├── tableformer_fast.safetensors.metadata (fc169f99...94fca685, 0.1 KB)
+    │                       ├── tm_config.json.lock (e3b0c442...7852b855, 0.0 KB)
+    │                       └── tm_config.json.metadata (1f922f07...3cdee4cc, 0.1 KB)
+    ├── .gitattributes (360aba3f...82700386, 1.9 KB)
+    ├── .gitignore (b44b4041...6f56e95d, 5.1 KB)
+    ├── README.md (bd9a593d...3cc41eb3, 3.4 KB)
+    ├── config.json (9c34024d...b62396d9, 0.0 KB)
     └── model_artifacts
         ├── layout
-        │   ├── config.json
-        │   ├── model.safetensors
-        │   └── preprocessor_config.json
+        │   ├── config.json (68b24d60...4374f656, 2.8 KB)
+        │   ├── model.safetensors (31e60b47...60c8910b, 167642.8 KB)
+        │   └── preprocessor_config.json (cd38cd59...a0c4eaf1, 0.4 KB)
         └── tableformer
             ├── accurate
-            │   ├── tableformer_accurate.safetensors
-            │   └── tm_config.json
+            │   ├── tableformer_accurate.safetensors (2a7d6c92...a40374d9, 207771.9 KB)
+            │   └── tm_config.json (984e122c...36f3cffd, 6.9 KB)
             └── fast
-                ├── tableformer_fast.safetensors
-                └── tm_config.json
+                ├── tableformer_fast.safetensors (3119563a...6422f718, 142044.2 KB)
+                └── tm_config.json (dca67625...18c2622a, 6.9 KB)

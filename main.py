@@ -7,10 +7,10 @@ from docling.utils.model_downloader import download_models
 from validator import (
     generate_folder_structure,
     load_structure_from_json,
+    print_directory_tree,
+    save_directory_tree,
     save_structure_to_json,
     validate_structure,
-    save_directory_tree,
-    print_directory_tree,
 )
 
 # different add-ins described at:
@@ -22,7 +22,7 @@ model_folder= "./docling_models"
 
 
 # run to update the strcutre json file
-if True:
+if False:
     download_models(
         output_dir=Path(model_folder),
 
@@ -37,10 +37,10 @@ if True:
     )
     structure = generate_folder_structure(model_folder)
     save_structure_to_json(structure, "docling_models.json")
-    save_directory_tree(structure, "tree.txt")
+    save_directory_tree(structure, "tree.txt", show_hashes=True)
 else:
     structure = load_structure_from_json("docling_models.json")
-    print_directory_tree(structure=structure)
+    print_directory_tree(structure=structure, show_hashes=True)
 
 
 layout_model_info = {
@@ -61,4 +61,4 @@ comparison = validate_structure(model_folder, structure)
 
 
 
-print("done")
+print(comparison)
