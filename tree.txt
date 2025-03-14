@@ -1,0 +1,49 @@
+docling_models
+└── ds4sd--docling-models
+    ├── .cache
+    │   └── huggingface
+    │       ├── .gitignore
+    │       └── download
+    │           ├── .gitattributes.lock
+    │           ├── .gitattributes.metadata
+    │           ├── .gitignore.lock
+    │           ├── .gitignore.metadata
+    │           ├── README.md.lock
+    │           ├── README.md.metadata
+    │           ├── config.json.lock
+    │           ├── config.json.metadata
+    │           └── model_artifacts
+    │               ├── layout
+    │               │   ├── config.json.lock
+    │               │   ├── config.json.metadata
+    │               │   ├── model.safetensors.lock
+    │               │   ├── model.safetensors.metadata
+    │               │   ├── preprocessor_config.json.lock
+    │               │   └── preprocessor_config.json.metadata
+    │               └── tableformer
+    │                   ├── accurate
+    │                   │   ├── tableformer_accurate.safetensors.lock
+    │                   │   ├── tableformer_accurate.safetensors.metadata
+    │                   │   ├── tm_config.json.lock
+    │                   │   └── tm_config.json.metadata
+    │                   └── fast
+    │                       ├── tableformer_fast.safetensors.lock
+    │                       ├── tableformer_fast.safetensors.metadata
+    │                       ├── tm_config.json.lock
+    │                       └── tm_config.json.metadata
+    ├── .gitattributes
+    ├── .gitignore
+    ├── README.md
+    ├── config.json
+    └── model_artifacts
+        ├── layout
+        │   ├── config.json
+        │   ├── model.safetensors
+        │   └── preprocessor_config.json
+        └── tableformer
+            ├── accurate
+            │   ├── tableformer_accurate.safetensors
+            │   └── tm_config.json
+            └── fast
+                ├── tableformer_fast.safetensors
+                └── tm_config.json

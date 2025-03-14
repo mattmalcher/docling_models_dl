@@ -35,7 +35,7 @@
                     {
                       "type": "file",
                       "name": ".gitattributes.metadata",
-                      "hash": "760cd88e58cd8892bcf0dd58ec1f2f19a1769e87c4ce9ff660a1e3f6f623c568",
+                      "hash": "8c54ac6a12165900d44e79224c43b7d38d8a7da37f6f6d0b4a76cea6d89f7be2",
                       "algorithm": "sha256",
                       "size": 101
                     },
@@ -49,7 +49,7 @@
                     {
                       "type": "file",
                       "name": ".gitignore.metadata",
-                      "hash": "5ab2d89b704c572c0d79b12deae0ee825b7ca3ee8bf5df06a1fb22588eef91b9",
+                      "hash": "4fc3aceb65e23b4252da54a1cbbde2d8982752c3172804a13dcb7114ed301e58",
                       "algorithm": "sha256",
                       "size": 101
                     },
@@ -63,7 +63,7 @@
                     {
                       "type": "file",
                       "name": "README.md.metadata",
-                      "hash": "4cf8ec6334cfb0c2560d6c7cb77c37f8bbe00a47ee2cfd38b2b5930d4c4e6daa",
+                      "hash": "dc659d466b4f496a3c7e434dfa64d231da451894df4ac14c9d6bce5096c69460",
                       "algorithm": "sha256",
                       "size": 101
                     },
@@ -77,7 +77,7 @@
                     {
                       "type": "file",
                       "name": "config.json.metadata",
-                      "hash": "c6d5b264a68504ae9df6b858accc1018aedda1fdde84e1db34ae1aa2d159a563",
+                      "hash": "af9e238c076cf5eb35d687d89e2e55faff2e45f70040fdb1d547d01e5a3363d8",
                       "algorithm": "sha256",
                       "size": 100
                     },
@@ -99,7 +99,7 @@
                             {
                               "type": "file",
                               "name": "config.json.metadata",
-                              "hash": "927a36895b88e9366c3a6b7f03fb6751c9568a46d7ed4d9acb32025b74291493",
+                              "hash": "233debf0d609e7e0e94a1b898e9c0d1572f2cd9278b7eff3f42374529655e88d",
                               "algorithm": "sha256",
                               "size": 100
                             },
@@ -113,7 +113,7 @@
                             {
                               "type": "file",
                               "name": "model.safetensors.metadata",
-                              "hash": "8ec70980a7fe48014080c46053ff4cf3377019549b3a7fb643dbac922d0b9b43",
+                              "hash": "f507bd173c6657eadc073c91afd121a5d1492ce0f4bfda3d117ace829b10c16c",
                               "algorithm": "sha256",
                               "size": 125
                             },
@@ -127,7 +127,7 @@
                             {
                               "type": "file",
                               "name": "preprocessor_config.json.metadata",
-                              "hash": "87a0f58021b066760c4ea76b6145837a4c28a633af7b40119f462dc0095bc71b",
+                              "hash": "4dd9bf941fdfe0d1ab4b076a9509cb0692fc368532d71fa50e45ff00b28db8e5",
                               "algorithm": "sha256",
                               "size": 101
                             }
@@ -151,9 +151,9 @@
                                 {
                                   "type": "file",
                                   "name": "tableformer_accurate.safetensors.metadata",
-                                  "hash": "2b84038b61cddfe88b4cb7a518c426fc1c9dbf31106c936ae64f3b7099cb94bf",
+                                  "hash": "6305440b7d70e661763d3143ce00bd89646f8526ec57f8330c956ec4199366a3",
                                   "algorithm": "sha256",
-                                  "size": 124
+                                  "size": 125
                                 },
                                 {
                                   "type": "file",
@@ -165,7 +165,7 @@
                                 {
                                   "type": "file",
                                   "name": "tm_config.json.metadata",
-                                  "hash": "4d2bd585448b17ada05927be4bd82197ffb6c29b39e943490935899e4ca36263",
+                                  "hash": "8705b66b0d9ff6f2c8c3db1093a56eacabda4e8a6e1e1adf411ca8d13b30192d",
                                   "algorithm": "sha256",
                                   "size": 101
                                 }
@@ -185,7 +185,7 @@
                                 {
                                   "type": "file",
                                   "name": "tableformer_fast.safetensors.metadata",
-                                  "hash": "4fb4755685573ea5c126550edcde54966789468b6eafdec5e2924d0bc50f1bde",
+                                  "hash": "fc169f9920fb705eb1fbff6fcf9d68670555d738a6f3cd2f5fa15e1f94fca685",
                                   "algorithm": "sha256",
                                   "size": 125
                                 },
@@ -199,7 +199,7 @@
                                 {
                                   "type": "file",
                                   "name": "tm_config.json.metadata",
-                                  "hash": "f2c818537cac37ffe2f9fa76ac1eea92da3f850761dffbaf4221b1d958e0ce5a",
+                                  "hash": "1f922f07ac63382097e3f949f295590fb9bbebb77e9a8f41dc107a1e3cdee4cc",
                                   "algorithm": "sha256",
                                   "size": 101
                                 }

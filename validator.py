@@ -1,7 +1,8 @@
 import hashlib
 import json
 import os
-from typing import Any
+import sys
+from typing import Any, TextIO, Union
 
 
 def calculate_file_hash(
@@ -9,6 +10,7 @@ def calculate_file_hash(
 ) -> str:
     """
     Calculate hash of a file using specified algorithm.
+    For .metadata files, ignore the last line (timestamp).
 
     Args:
         filepath: Path to the file
@@ -20,12 +22,27 @@ def calculate_file_hash(
     """
     hash_func = hashlib.new(hash_algorithm)
 
-    with open(filepath, "rb") as f:
-        while True:
-            data = f.read(buffer_size)
-            if not data:
-                break
-            hash_func.update(data)
+    # Special handling for metadata files
+    filename = os.path.basename(filepath)
+    is_metadata = filename == ".metadata" or filename.endswith(".metadata")
+
+    if is_metadata:
+        # For metadata files, read all lines except the last one (timestamp)
+        with open(filepath, "rb") as f:
+            lines = f.readlines()
+
+        # Skip the last line if it exists
+        if lines:
+            content_to_hash = b"".join(lines[:-1])
+            hash_func.update(content_to_hash)
+    else:
+        # Standard file processing
+        with open(filepath, "rb") as f:
+            while True:
+                data = f.read(buffer_size)
+                if not data:
+                    break
+                hash_func.update(data)
 
     return hash_func.hexdigest()
 
@@ -41,7 +58,7 @@ def generate_folder_structure(
         hash_algorithm: Algorithm to use for file hashing
 
     Returns:
-        Dictionary representing folder structure with file hashes
+        dictionary representing folder structure with file hashes
     """
     structure = {
         "type": "directory",
@@ -87,7 +104,7 @@ def save_structure_to_json(structure: dict[str, Any], output_file: str) -> None:
     Save folder structure to JSON file.
 
     Args:
-        structure: Dictionary representing folder structure
+        structure: dictionary representing folder structure
         output_file: Path to output JSON file
     """
     with open(output_file, "w") as f:
@@ -102,7 +119,7 @@ def load_structure_from_json(json_file: str) -> dict[str, Any]:
         json_file: Path to JSON file
 
     Returns:
-        Dictionary representing folder structure
+        dictionary representing folder structure
     """
     with open(json_file, "r") as f:
         return json.load(f)
@@ -119,7 +136,7 @@ def validate_structure(
         baseline_structure: Baseline structure to compare against
 
     Returns:
-        Dictionary with validation results
+        dictionary with validation results
     """
     # Extract algorithm from baseline
     hash_algorithm = None
@@ -148,7 +165,7 @@ def compare_structures(
         current: Current structure
 
     Returns:
-        Dictionary with comparison results
+        dictionary with comparison results
     """
     results = {"matches": True, "differences": []}
 
@@ -209,6 +226,87 @@ def compare_structures(
     return results
 
 
+def print_directory_tree(
+    structure: dict[str, Any],
+    output: Union[TextIO, str] = sys.stdout,
+    show_hashes: bool = False,
+    prefix: str = "",
+    last_item: bool = True,
+    is_root: bool = True,
+) -> None:
+    """
+    Print a human-readable directory tree from the structure dictionary.
+
+    Args:
+        structure: dictionary representing folder structure
+        output: File object or path to output file (default: sys.stdout)
+        show_hashes: Whether to show file hashes
+        prefix: Prefix for the current line (used for recursion)
+        last_item: Whether this is the last item in its parent directory (used for recursion)
+        is_root: Whether this is the root directory
+    """
+    # Open file if a path string was provided
+    close_file = False
+    if isinstance(output, str):
+        output = open(output, "w")
+        close_file = True
+
+    try:
+        # Determine the symbols to use
+        if is_root:
+            # Root directory
+            line = structure.get("name", "Root")
+            output.write(f"{line}\n")
+            new_prefix = ""
+        else:
+            # Non-root items
+            item_prefix = "└── " if last_item else "├── "
+            line = item_prefix + structure.get("name", "")
+
+            # Add hash info if it's a file and hashes should be shown
+            if structure.get("type") == "file" and show_hashes and "hash" in structure:
+                short_hash = structure["hash"][:8] + "..." + structure["hash"][-8:]
+                size_str = f"{structure.get('size', 0) / 1024:.1f} KB"
+                line += f" ({short_hash}, {size_str})"
+
+            # Add error info if present
+            if "error" in structure:
+                line += f" [ERROR: {structure['error']}]"
+
+            output.write(f"{prefix}{line}\n")
+
+            # Prepare prefix for children
+            new_prefix = prefix + ("    " if last_item else "│   ")
+
+        # If it's a directory, process its contents
+        if structure.get("type") == "directory" and "contents" in structure:
+            contents = structure.get("contents", [])
+            for i, item in enumerate(contents):
+                is_last = i == len(contents) - 1
+                print_directory_tree(
+                    item, output, show_hashes, new_prefix, is_last, False
+                )
+
+    finally:
+        # Close the file if we opened it
+        if close_file:
+            output.close()
+
+
+def save_directory_tree(
+    structure: dict[str, Any], output_file: str, show_hashes: bool = False
+) -> None:
+    """
+    Save a human-readable directory tree to a file.
+
+    Args:
+        structure: dictionary representing folder structure
+        output_file: Path to output file
+        show_hashes: Whether to show file hashes
+    """
+    print_directory_tree(structure, output_file, show_hashes)
+
+
 def main() -> None:
     """
     Main function to demonstrate usage.
@@ -249,6 +347,21 @@ def main() -> None:
             print("Validation failed! Differences found:")
             for diff in results["differences"]:
                 print(f"- {diff}")
+
+    elif args.action == "tree":
+        # If path is a directory, generate structure first
+        if os.path.isdir(args.path):
+            structure = generate_folder_structure(args.path, args.algorithm)
+        # If path is a JSON file, load structure from it
+        else:
+            structure = load_structure_from_json(args.path)
+
+        # Print tree to output file or stdout
+        if args.output:
+            save_directory_tree(structure, args.output, args.show_hashes)
+            print(f"Directory tree saved to {args.output}")
+        else:
+            print_directory_tree(structure, show_hashes=args.show_hashes)
 
 
 if __name__ == "__main__":
