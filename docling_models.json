@@ -1,0 +1,328 @@
+{
+  "type": "directory",
+  "name": "docling_models",
+  "contents": [
+    {
+      "type": "directory",
+      "name": "ds4sd--docling-models",
+      "contents": [
+        {
+          "type": "directory",
+          "name": ".cache",
+          "contents": [
+            {
+              "type": "directory",
+              "name": "huggingface",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": ".gitignore",
+                  "hash": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+                  "algorithm": "sha256",
+                  "size": 1
+                },
+                {
+                  "type": "directory",
+                  "name": "download",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": ".gitattributes.lock",
+                      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "algorithm": "sha256",
+                      "size": 0
+                    },
+                    {
+                      "type": "file",
+                      "name": ".gitattributes.metadata",
+                      "hash": "760cd88e58cd8892bcf0dd58ec1f2f19a1769e87c4ce9ff660a1e3f6f623c568",
+                      "algorithm": "sha256",
+                      "size": 101
+                    },
+                    {
+                      "type": "file",
+                      "name": ".gitignore.lock",
+                      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "algorithm": "sha256",
+                      "size": 0
+                    },
+                    {
+                      "type": "file",
+                      "name": ".gitignore.metadata",
+                      "hash": "5ab2d89b704c572c0d79b12deae0ee825b7ca3ee8bf5df06a1fb22588eef91b9",
+                      "algorithm": "sha256",
+                      "size": 101
+                    },
+                    {
+                      "type": "file",
+                      "name": "README.md.lock",
+                      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "algorithm": "sha256",
+                      "size": 0
+                    },
+                    {
+                      "type": "file",
+                      "name": "README.md.metadata",
+                      "hash": "4cf8ec6334cfb0c2560d6c7cb77c37f8bbe00a47ee2cfd38b2b5930d4c4e6daa",
+                      "algorithm": "sha256",
+                      "size": 101
+                    },
+                    {
+                      "type": "file",
+                      "name": "config.json.lock",
+                      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "algorithm": "sha256",
+                      "size": 0
+                    },
+                    {
+                      "type": "file",
+                      "name": "config.json.metadata",
+                      "hash": "c6d5b264a68504ae9df6b858accc1018aedda1fdde84e1db34ae1aa2d159a563",
+                      "algorithm": "sha256",
+                      "size": 100
+                    },
+                    {
+                      "type": "directory",
+                      "name": "model_artifacts",
+                      "contents": [
+                        {
+                          "type": "directory",
+                          "name": "layout",
+                          "contents": [
+                            {
+                              "type": "file",
+                              "name": "config.json.lock",
+                              "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                              "algorithm": "sha256",
+                              "size": 0
+                            },
+                            {
+                              "type": "file",
+                              "name": "config.json.metadata",
+                              "hash": "927a36895b88e9366c3a6b7f03fb6751c9568a46d7ed4d9acb32025b74291493",
+                              "algorithm": "sha256",
+                              "size": 100
+                            },
+                            {
+                              "type": "file",
+                              "name": "model.safetensors.lock",
+                              "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                              "algorithm": "sha256",
+                              "size": 0
+                            },
+                            {
+                              "type": "file",
+                              "name": "model.safetensors.metadata",
+                              "hash": "8ec70980a7fe48014080c46053ff4cf3377019549b3a7fb643dbac922d0b9b43",
+                              "algorithm": "sha256",
+                              "size": 125
+                            },
+                            {
+                              "type": "file",
+                              "name": "preprocessor_config.json.lock",
+                              "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                              "algorithm": "sha256",
+                              "size": 0
+                            },
+                            {
+                              "type": "file",
+                              "name": "preprocessor_config.json.metadata",
+                              "hash": "87a0f58021b066760c4ea76b6145837a4c28a633af7b40119f462dc0095bc71b",
+                              "algorithm": "sha256",
+                              "size": 101
+                            }
+                          ]
+                        },
+                        {
+                          "type": "directory",
+                          "name": "tableformer",
+                          "contents": [
+                            {
+                              "type": "directory",
+                              "name": "accurate",
+                              "contents": [
+                                {
+                                  "type": "file",
+                                  "name": "tableformer_accurate.safetensors.lock",
+                                  "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                                  "algorithm": "sha256",
+                                  "size": 0
+                                },
+                                {
+                                  "type": "file",
+                                  "name": "tableformer_accurate.safetensors.metadata",
+                                  "hash": "2b84038b61cddfe88b4cb7a518c426fc1c9dbf31106c936ae64f3b7099cb94bf",
+                                  "algorithm": "sha256",
+                                  "size": 124
+                                },
+                                {
+                                  "type": "file",
+                                  "name": "tm_config.json.lock",
+                                  "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                                  "algorithm": "sha256",
+                                  "size": 0
+                                },
+                                {
+                                  "type": "file",
+                                  "name": "tm_config.json.metadata",
+                                  "hash": "4d2bd585448b17ada05927be4bd82197ffb6c29b39e943490935899e4ca36263",
+                                  "algorithm": "sha256",
+                                  "size": 101
+                                }
+                              ]
+                            },
+                            {
+                              "type": "directory",
+                              "name": "fast",
+                              "contents": [
+                                {
+                                  "type": "file",
+                                  "name": "tableformer_fast.safetensors.lock",
+                                  "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                                  "algorithm": "sha256",
+                                  "size": 0
+                                },
+                                {
+                                  "type": "file",
+                                  "name": "tableformer_fast.safetensors.metadata",
+                                  "hash": "4fb4755685573ea5c126550edcde54966789468b6eafdec5e2924d0bc50f1bde",
+                                  "algorithm": "sha256",
+                                  "size": 125
+                                },
+                                {
+                                  "type": "file",
+                                  "name": "tm_config.json.lock",
+                                  "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                                  "algorithm": "sha256",
+                                  "size": 0
+                                },
+                                {
+                                  "type": "file",
+                                  "name": "tm_config.json.metadata",
+                                  "hash": "f2c818537cac37ffe2f9fa76ac1eea92da3f850761dffbaf4221b1d958e0ce5a",
+                                  "algorithm": "sha256",
+                                  "size": 101
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": ".gitattributes",
+          "hash": "360aba3ff7ce75396f13f0a77925fe9e79997e8d4bac064595ebb00c82700386",
+          "algorithm": "sha256",
+          "size": 1905
+        },
+        {
+          "type": "file",
+          "name": ".gitignore",
+          "hash": "b44b404189eaff3631c470946e7350c2e88cead304d332a8ad50325e6f56e95d",
+          "algorithm": "sha256",
+          "size": 5180
+        },
+        {
+          "type": "file",
+          "name": "README.md",
+          "hash": "bd9a593d3b2e6a2113686d6e030cb10701349d82f48ebec2da6589593cc41eb3",
+          "algorithm": "sha256",
+          "size": 3486
+        },
+        {
+          "type": "file",
+          "name": "config.json",
+          "hash": "9c34024dc28ff47b75818f415e769809798c29bf9bde6f2ccc63a4acb62396d9",
+          "algorithm": "sha256",
+          "size": 41
+        },
+        {
+          "type": "directory",
+          "name": "model_artifacts",
+          "contents": [
+            {
+              "type": "directory",
+              "name": "layout",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "config.json",
+                  "hash": "68b24d60b326aaf7daf7a3d87ab9bdc6db0fa5cdeab6e5c04279d81b4374f656",
+                  "algorithm": "sha256",
+                  "size": 2864
+                },
+                {
+                  "type": "file",
+                  "name": "model.safetensors",
+                  "hash": "31e60b4709571b613bc8736a9c982fb550d8d7a1809160a68a8282af60c8910b",
+                  "algorithm": "sha256",
+                  "size": 171666216
+                },
+                {
+                  "type": "file",
+                  "name": "preprocessor_config.json",
+                  "hash": "cd38cd59999e7a95d68e487fbe5132df3d4e5c32a0836add57e6126ba0c4eaf1",
+                  "algorithm": "sha256",
+                  "size": 444
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "tableformer",
+              "contents": [
+                {
+                  "type": "directory",
+                  "name": "accurate",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "tableformer_accurate.safetensors",
+                      "hash": "2a7d6c924b3cd12fb99a09280ca9c33a89c5d60b93253617d2e088c1a40374d9",
+                      "algorithm": "sha256",
+                      "size": 212758388
+                    },
+                    {
+                      "type": "file",
+                      "name": "tm_config.json",
+                      "hash": "984e122ceb8ccf84d84c9d2882f6f2302a44b4f1e577babd6289892c36f3cffd",
+                      "algorithm": "sha256",
+                      "size": 7060
+                    }
+                  ]
+                },
+                {
+                  "type": "directory",
+                  "name": "fast",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "tableformer_fast.safetensors",
+                      "hash": "3119563aab5a7c96fda4d621119b63fd8806272b86c30936d15507616422f718",
+                      "algorithm": "sha256",
+                      "size": 145453276
+                    },
+                    {
+                      "type": "file",
+                      "name": "tm_config.json",
+                      "hash": "dca6762508dddfae6d57d6cb4ef822c6000119dff0f3b6489db7413118c2622a",
+                      "algorithm": "sha256",
+                      "size": 7060
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
